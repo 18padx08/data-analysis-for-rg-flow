@@ -80,9 +80,9 @@ def Zk(theSamples, Z_s,newK):
         for config in theSamples[kap]:
             innerValue = 0
             for kj in theSamples.keys():
-                    actionPart = config[3]
-                    #use this for lambda analysis
-                    #actionPart = (config[1]-1)**2
+                actionPart = config[3]
+                #use this for lambda analysis
+                #actionPart = (config[1]-1)**2
                 innerValue += functionConstant(actionPart,float(kj) - newK,Z_s[kj])
             #print(config[3] - avgEnergy)
             tmp += 1.0/innerValue  #np.exp((config[3]) * 2 *newK)/innerValue
